@@ -6,23 +6,31 @@ Iremos usar a versão que está sendo traduzida para português, disponível em 
 
 Grupo de estudos organizado por [R-Ladies São Paulo](https://rladies-sp.org).
 
+## Formato
+
 Os encontros do grupo de estudos serão realizados online.
 
-**Definir:** Plataforma. Fazer uma chamada no Google Meet, gravar e colocar no youtube? Ou fazer ao vivo no youtube usando o Streamyard?
+Em cada mês, teremos um capítulo (ou mais de um, no caso de capítulos mais curtos) que serão abordados.
+
+De preferência, as pessoas devem ler o capítulo **antes** do encontro do grupo de estudo.
+
+No encontro, a ideia é que uma pessoa faça uma apresentação sobre o capítulo (não precisa necessariamente ser com slides, mas a ideia é repassar os principais conceitos do capítulo no encontro), e depois abrimos para discussão, dúvidas, entre outros.
+
+Os encontros serão realizados em uma chamada do Google Meet, e serão gravados para que seja possível revisar.
+
+## Pontos a definir
+
+-   **Definir:** dia da semana e horário para os encontros. 
+
+-   **Definir:** duração dos encontros (2h?).
+
+-   **Definir:** quem vai apresentar cada capítulo.
 
 ## Calendário
 
 -   Início em 2024.
 
--   Encontros mensais.
-
--   **Definir:** dia da semana e horário para os encontros.
-
--   **Definir:** duração dos encontros (2h?).
-
--   **Definir:** formato dos encontros (apresentação + discussão?).
-
--   **Definir:** quem vai apresentar cada capítulo.
+-   Os encontros serão mensais.
 
 ## **Parte 1**: "Visão geral".
 
