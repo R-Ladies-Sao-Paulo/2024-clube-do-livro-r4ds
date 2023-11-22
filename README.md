@@ -16,13 +16,16 @@ De preferência, as pessoas devem ler o capítulo **antes** do encontro do grupo
 
 No encontro, a ideia é que uma pessoa faça uma apresentação sobre o capítulo (não precisa necessariamente ser com slides, mas a ideia é repassar os principais conceitos do capítulo no encontro), e depois abrimos para discussão, dúvidas, entre outros.
 
-Os encontros serão realizados em uma chamada do Google Meet, e serão gravados para que seja possível revisar.
+Os encontros serão realizados em uma chamada do Google Meet, e serão gravados para que seja possível revisar. 
+
+A ideia iniciar é fazer encontros de 2h, porém podemos ajustar ao longo do percurso.
 
 ## Pontos a definir
 
--   **Definir:** dia da semana e horário para os encontros. 
 
--   **Definir:** duração dos encontros (2h?).
+- Indicar interesse e opinar nessas decisões: <https://forms.gle/fEAptgHgNXbLTPWy6>
+
+-   **Definir:** dia da semana e horário para os encontros. 
 
 -   **Definir:** quem vai apresentar cada capítulo.
 
