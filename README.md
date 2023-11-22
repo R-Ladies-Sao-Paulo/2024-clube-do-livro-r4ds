@@ -26,33 +26,15 @@ Os encontros do grupo de estudos serão realizados online.
 
 ## **Parte 1**: "Visão geral".
 
-+----------+----------------+-------------------------------------------------------------------------------------------------------------+---------------------+----------------+
-| Encontro | Data           | Capítulo(s)/Tema                                                                                            | Capítulo traduzido? | Quem apresenta |
-+==========+================+=============================================================================================================+=====================+================+
-| 1        | Janeiro/2024   | -   Apresentação do grupo de estudos                                                                        | 🟩                  | Beatriz Milz   |
-|          |                |                                                                                                             |                     |                |
-|          |                | -   [Boas-vindas](https://cienciadedatos.github.io/pt-r4ds/)                                                |                     |                |
-|          |                |                                                                                                             |                     |                |
-|          |                | -   [Prefácio da segunda edição](https://cienciadedatos.github.io/pt-r4ds/preface-2e.html)                  |                     |                |
-|          |                |                                                                                                             |                     |                |
-|          |                | -   [Introdução](https://cienciadedatos.github.io/pt-r4ds/intro.html)                                       |                     |                |
-+----------+----------------+-------------------------------------------------------------------------------------------------------------+---------------------+----------------+
-| 2        | Fevereiro/2024 | -   [Visualização de dados](https://cienciadedatos.github.io/pt-r4ds/data-visualize.html)                   | 🟩                  |                |
-+----------+----------------+-------------------------------------------------------------------------------------------------------------+---------------------+----------------+
-| 3        | Março/2024     | -   [Fluxo de Trabalho: básico](https://cienciadedatos.github.io/pt-r4ds/workflow-basics.html)              | 🟩                  |                |
-|          |                |                                                                                                             |                     |                |
-|          |                | -   [Fluxo de Trabalho: Scripts e Projetos](https://cienciadedatos.github.io/pt-r4ds/workflow-scripts.html) | 🟨                  |                |
-+----------+----------------+-------------------------------------------------------------------------------------------------------------+---------------------+----------------+
-| 4        | Abril/2024     | -   [Transformação de dados](https://cienciadedatos.github.io/pt-r4ds/data-transform.html)                  | 🟧                  |                |
-+----------+----------------+-------------------------------------------------------------------------------------------------------------+---------------------+----------------+
-| 5        | Maio/2024      | -   [Organização de dados](https://cienciadedatos.github.io/pt-r4ds/data-tidy.html)                         | 🟨                  |                |
-+----------+----------------+-------------------------------------------------------------------------------------------------------------+---------------------+----------------+
-| 6        | Junho/2024     | -   [Importação de dados](https://cienciadedatos.github.io/pt-r4ds/data-import.html)                        | 🟧                  |                |
-+----------+----------------+-------------------------------------------------------------------------------------------------------------+---------------------+----------------+
-| 7        | Julho/2024     | -   [Fluxo de trabalho: estilo de código](https://cienciadedatos.github.io/pt-r4ds/workflow-style.html)     | 🟩                  |                |
-|          |                |                                                                                                             |                     |                |
-|          |                | -   [Fluxo de trabalho: buscando ajuda](https://cienciadedatos.github.io/pt-r4ds/workflow-help.html)        | 🟧                  |                |
-+----------+----------------+-------------------------------------------------------------------------------------------------------------+---------------------+----------------+
+| Encontro |      Data      |                                  Capítulo(s)/Tema                                  | Capítulo traduzido? | Quem apresenta |
+|:--------:|:--------------:|:----------------------------------------------------------------------------------:|:-------------------:|:--------------:|
+|    1     |  Janeiro/2024  | Apresentação do grupo de estudos Boas-vindas Prefácio da segunda edição Introdução |         🟩          |  Beatriz Milz  |
+|    2     | Fevereiro/2024 |                               Visualização de dados                                |         🟩          |                |
+|    3     |   Março/2024   |          Fluxo de Trabalho: básico Fluxo de Trabalho: Scripts e Projetos           |        🟩 🟨        |                |
+|    4     |   Abril/2024   |                               Transformação de dados                               |         🟧          |                |
+|    5     |   Maio/2024    |                                Organização de dados                                |         🟨          |                |
+|    6     |   Junho/2024   |                                Importação de dados                                 |         🟧          |                |
+|    7     |   Julho/2024   |       Fluxo de trabalho: estilo de código Fluxo de trabalho: buscando ajuda        |        🟩 🟧        |                |
 
 **Legenda:**
 
