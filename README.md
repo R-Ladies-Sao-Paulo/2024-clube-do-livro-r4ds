@@ -25,8 +25,6 @@ A ideia iniciar é fazer encontros de 2h, porém podemos ajustar ao longo do per
 
 - Indicar interesse e opinar nessas decisões: <https://forms.gle/fEAptgHgNXbLTPWy6>
 
--   **Definir:** dia da semana e horário para os encontros. 
-
 -   **Definir:** quem vai apresentar cada capítulo.
 
 ## Calendário
@@ -39,13 +37,13 @@ A ideia iniciar é fazer encontros de 2h, porém podemos ajustar ao longo do per
 
 | Encontro |      Data      |                                                                                                                     Capítulo(s)/Tema                                                                                                                     | Capítulo traduzido? | Quem apresenta |
 |:--------:|:--------:|:------------------------------:|:--------:|:--------:|
-|    1     |  Janeiro/2024  | Apresentação do grupo de estudos / [Boas-vindas](https://cienciadedatos.github.io/pt-r4ds/) / [Prefácio da segunda edição](https://cienciadedatos.github.io/pt-r4ds/preface-2e.html) / [Introdução](https://cienciadedatos.github.io/pt-r4ds/intro.html) |         🟩          |  Beatriz Milz  |
-|    2     | Fevereiro/2024 |                                                                                  [Visualização de dados](https://cienciadedatos.github.io/pt-r4ds/data-visualize.html)                                                                                   |         🟩          |                |
-|    3     |   Março/2024   |                           [Fluxo de Trabalho: básico](https://cienciadedatos.github.io/pt-r4ds/workflow-basics.html) / [Fluxo de Trabalho: Scripts e Projetos](https://cienciadedatos.github.io/pt-r4ds/workflow-scripts.html)                           |        🟩 🟨        |                |
-|    4     |   Abril/2024   |                                                                                  [Transformação de dados](https://cienciadedatos.github.io/pt-r4ds/data-transform.html)                                                                                  |         🟧          |                |
-|    5     |   Maio/2024    |                                                                                     [Organização de dados](https://cienciadedatos.github.io/pt-r4ds/data-tidy.html)                                                                                      |         🟨          |                |
-|    6     |   Junho/2024   |                                                                                     [Importação de dados](https://cienciadedatos.github.io/pt-r4ds/data-import.html)                                                                                     |         🟧          |                |
-|    7     |   Julho/2024   |                          [Fluxo de trabalho: estilo de código](https://cienciadedatos.github.io/pt-r4ds/workflow-style.html) / [Fluxo de trabalho: buscando ajuda](https://cienciadedatos.github.io/pt-r4ds/workflow-help.html)                          |        🟩 🟧        |                |
+|    1     |  15/01/2024 - 19h  | Apresentação do grupo de estudos / [Boas-vindas](https://cienciadedatos.github.io/pt-r4ds/) / [Prefácio da segunda edição](https://cienciadedatos.github.io/pt-r4ds/preface-2e.html) / [Introdução](https://cienciadedatos.github.io/pt-r4ds/intro.html) |         🟩          |  Beatriz Milz  |
+|    2     | 26/02/2024 - 19h  |                                                                                  [Visualização de dados](https://cienciadedatos.github.io/pt-r4ds/data-visualize.html)                                                                                   |         🟩          |                |
+|    3     |   25/03/2024 - 19h    |                           [Fluxo de Trabalho: básico](https://cienciadedatos.github.io/pt-r4ds/workflow-basics.html) / [Fluxo de Trabalho: Scripts e Projetos](https://cienciadedatos.github.io/pt-r4ds/workflow-scripts.html)                           |        🟩 🟨        |                |
+|    4     |   22/04/2024 - 19h    |                                                                                  [Transformação de dados](https://cienciadedatos.github.io/pt-r4ds/data-transform.html)                                                                                  |         🟧          |                |
+|    5     |   27/05/2024 - 19h     |                                                                                     [Organização de dados](https://cienciadedatos.github.io/pt-r4ds/data-tidy.html)                                                                                      |         🟨          |                |
+|    6     |   24/06/2024  - 19h   |                                                                                     [Importação de dados](https://cienciadedatos.github.io/pt-r4ds/data-import.html)                                                                                     |         🟧          |                |
+|    7     |   29/06/2024  - 19h   |                          [Fluxo de trabalho: estilo de código](https://cienciadedatos.github.io/pt-r4ds/workflow-style.html) / [Fluxo de trabalho: buscando ajuda](https://cienciadedatos.github.io/pt-r4ds/workflow-help.html)                          |        🟩 🟧        |                |
 
 **Legenda:**
 
