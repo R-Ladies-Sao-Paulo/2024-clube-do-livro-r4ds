@@ -54,3 +54,7 @@ A ideia iniciar é fazer encontros de 2h, porém podemos ajustar ao longo do per
 🟨 Em revisão
 
 🟩 Tradução completa
+
+## Materiais
+
+Em breve!
