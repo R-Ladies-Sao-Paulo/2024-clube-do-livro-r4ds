@@ -1,6 +1,8 @@
-Clube do livro R for Data Science (R4DS)  (2 edição) escrito por Hadley Wickham, Mine Çetinkaya-Rundel, e Garrett Grolemund.
+Esse é o primeiro encontro do clube do livro R for Data Science (2 edição)!
 
-Iremos usar a versão que está sendo traduzida para português, disponível em https://cienciadedatos.github.io/pt-r4ds/ .
+Esse livro foi escrito por Hadley Wickham (criador do ggplot2), Mine Çetinkaya-Rundel, e Garrett Grolemund.
+
+Iremos usar a versão que está sendo traduzida para português, disponível gratuitamente e online em https://cienciadedatos.github.io/pt-r4ds/ .
 
 Clube do livro organizado por R-Ladies São Paulo, liderado por Beatriz Milz e Luana Antunes.
 
