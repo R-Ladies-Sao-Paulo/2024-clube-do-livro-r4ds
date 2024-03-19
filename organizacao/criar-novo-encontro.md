@@ -1,9 +1,9 @@
 # Criar um novo encontro
 
 - Antes de criar o encontro, é bom já ter definido:
-   - Qual é o capítulo do livro a ser abordado no encontro?
-   - Quem vai apresentar?
-   - Qual será o dia e horário que o encontro vai acontecer? (que funcione para quem vai apresentar)
+   - [ ] Qual é o capítulo do livro a ser abordado no encontro?
+   - [ ] Quem vai apresentar?
+   - [ ] Qual será o dia e horário que o encontro vai acontecer? (que funcione para quem vai apresentar)
  
 Com essas informações, esses são os passos necessários:
 
@@ -15,8 +15,16 @@ Com essas informações, esses são os passos necessários:
 
 - [ ] Criar o evento no Meetup. É necessário fazer uma cópia do último evento do clube do livro, e aí alterar as informações necessárias.
 
-- [ ] Postar nas redes sociais para divulgar o clube do livro: instagram, linkedin, etc...
+- [ ] Adicionar na agenda do Google Agenda do grupo
 
-- [ ] Adicionar na agenda do Google Agenda.
+- [ ] Divulgação: Postar nas redes sociais para divulgar o encontro 
+   - [ ] Mailing
+   - [ ] Instagram
+   - [ ] Linkedin
+   - [ ] Telegram
 
-- [ ] Enviar no mailing
+- [ ] Checar se na lista de presença apresenta a opção para o encontro
+
+# Pós-encontro
+
+- [ ] Atualizar o arquivo compartilhado com links, slides, etc
