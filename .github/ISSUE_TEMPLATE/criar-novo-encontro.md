@@ -11,6 +11,7 @@ assignees: ''
 
 - Antes de criar o encontro, é bom já ter definido:
    - [ ] Qual é o capítulo do livro a ser abordado no encontro?
+   - [ ] O capítulo está traduzido?
    - [ ] Quem vai apresentar?
    - [ ] Qual será o dia e horário que o encontro vai acontecer? (que funcione para quem vai apresentar)
 
