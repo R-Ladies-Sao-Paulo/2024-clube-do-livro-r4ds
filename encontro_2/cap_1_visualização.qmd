@@ -1,0 +1,933 @@
+---
+title: "Clube do Livro - R Para Ciência de Dados (2ª Edição)"
+author: "Luana Antunes e Beatriz Milz"
+format: html
+execute: 
+  echo: false
+  warning: false
+  message: false
+  output: true
+---
+
+# Capítulo 1 
+# VISUALIZAÇÃO DE DADOS
+
+### *1.1 Por que começar por aqui?*
+
+-   A visualização é um ótimo ponto de partida entender os dados;
+-   Neste capítulo será apresentada a estrutura básica de um gráfico ggplot2 e técnicas para transformar dados em gráficos.
+
+
+
+#### O data frame pinguins
+
+```{r}
+#| echo: true
+
+## instalação de pacotes
+
+#install.packages("tidyverse")
+```
+
+
+```{r}
+library(tidyverse)
+
+
+#install.packages(
+# c("arrow", "curl", "remotes", "duckdb",
+#  "ggrepel", "ggridges", "ggthemes", "hexbin", "janitor",  
+# "leaflet", "maps", "openxlsx", "repurrrsive", "tidymodels", "writexl"))
+
+```
+
+
+```{r}
+# Instalando "dados"
+remotes::install_github("cienciadedatos/dados")
+```
+
+
+```{r}
+# Chamando bibliotecas
+library(ggrepel)
+library(ggthemes)
+library(dados)
+
+```
+
+Um data frame é uma coleção tabular (formato de tabela) de variáveis (nas colunas) e observações (nas linhas):
+
+-   `pinguins` contém 344 observações;
+
+```{r}
+#| echo: true
+# consegue visualizar parte do conteúdo usando ::
+
+dados::pinguins
+```
+
+Com a função "glimpse" você pode ver uma visualização alternativa, onde estão todas as variáveis e as primeiras observações de cada variável:
+
+```{r}
+#| echo: true
+
+glimpse(pinguins)
+
+```
+
+Agora no RStudio, execute View(pinguins) para abrir um visualizador de dados interativo:
+
+```{r}
+#| echo: true
+View(pinguins)
+```
+
+Para saber mais sobre execute ajuda com <?pinguins>
+
+```{r}
+#| echo: false
+?pinguins
+
+```
+
+Criando um gráfico ggplot:
+
+```{r}
+#| echo: true
+
+
+ggplot(
+  data = pinguins, 
+  mapping = aes(x = comprimento_nadadeira, 
+                y = massa_corporal) ) +
+  geom_point(
+    mapping = aes(color = especie,
+                  shape = especie) )+
+  geom_smooth(method = "lm") +
+  labs( title = "Massa corporal e comprimento da nadadeira", 
+        subtitle = "Medidas para Pinguim-de-adélia, Piguim-de-barbicha e Pinguim-gentoo",
+        x = "Comprimento da nadadeira (mm)",
+        y = "Massa corporal (g)",
+        color = "Espécie",
+        shape = "Espécie" )
+   
+```
+
+Ou com um código usando pipe, mais simples sem diferenciar os tipos de espécies:
+
+```{r}
+#| echo: true
+pinguins |> 
+  ggplot(aes(x = comprimento_nadadeira, y = massa_corporal)) +
+  geom_point()
+
+
+```
+
+#### TIPOS DE VARIÁVEIS
+
+#### Variável categórica
+
+Para examinar a distribuição de uma variável categórica, você pode usar um gráfico de barras. A altura das barras exibe quantas observações ocorreram com cada valor x.
+
+```{r}
+#| echo: true
+ggplot(pinguins, aes(x = especie)) +
+  geom_bar()
+```
+
+Ou, reordenando usando um parâmetro em aes:
+
+```{r}
+#| echo: true
+ggplot(pinguins, aes(x = fct_infreq(especie))) +
+  geom_bar()
+
+```
+
+```{r}
+#| echo: true
+?fct_infreq()
+```
+
+Chegou a parte de praticar o que vimos até aqui.
+
+
+
+
+
+
+
+#### *Exercícios (1.2.5)*
+
+**1. Quantas linhas existem em `pinguins`? E quantas colunas?**
+
+Resposta:
+
+*linhas: 344 (rows)*
+
+*colunas: 8 (columns)*
+
+**2. O que a variável `profundidade_bico` no *data frame*`pinguins` descreve? Leia a documentação da base pinguins para descobrir, utilizando o comando `[?pinguins](https://rdrr.io/pkg/dados/man/pinguins.html)` .**
+
+Resposta:
+
+*profundidade_bico número inteiro que indica a profundidade do bico (em milímetros)*
+
+**3. Faça um gráfico de dispersão de `profundidade_bico` em função de `comprimento_bico`. Ou seja, faça um gráfico de dispersão com `profundidade_bico` no eixo y e `comprimento_bico` no eixo x. Descreva a relação entre essas duas variáveis.**
+
+```{r}
+#| echo: true
+
+ pinguins|> 
+   ggplot(aes(x = comprimento_bico, y = profundidade_bico)) + 
+   geom_point()+
+   geom_smooth(method = "lm")
+
+```
+
+
+
+```{r}
+#| echo: true
+ ggplot(pinguins,
+  aes(x = comprimento_bico, y = profundidade_bico)) + 
+  geom_point()
+```
+
+Resposta:
+
+*Eu vejo pelo menos três blocos de dados:*
+
+*1) um bloco de observações de pinguins com bicos que variam da profundidade de 16 a 20 mm e com comprimento de bico menor que 40 mm;*
+
+*2) outros bloco observações de pinguins com bicos com profundidade menor de 16 mm e com comprimento de bico mair que 40 a 50 mm;*
+
+*3) terceiro bloco de observações de pinguins com bicos com profundidade maior de 17mm ecom comprimento maior que 50 mm.*
+
+*Há a uma relação linear negativa (ou inversa) entre profundidade do bico e comprimento, quanto maior a profundidade menor o comprimento.*
+
+**4. O que acontece se você fizer um gráfico de dispersão de especie (Y) em função de profundidade_bico(X) ? Qual seria uma melhor escolha de geometria (geom)?**
+
+Resposta:
+
+Veja o código e o resultado do gráfico de dispersão:
+
+```{r}
+#| echo: true
+ggplot(pinguins, aes(x = profundidade_bico, y = especie)) +
+  geom_point()
+```
+
+A escolha de um gráfico de dispersão não é a mais adequada nesse caso, quando temos uma variável numérica (quantitativas) e outra categórica (qualitativa). Uma variável numérica é aquela descrita por números, podendo ser contínua ou discreta, como exemplo a profundidade do bico. Enquanto a variável categórica representa um atributo do sujeito ou classe, subdividida em ordinal ou nominal, como é o caso da espécie.
+
+A geometria boxplot/histograma ou violino serão mais adequadas.
+
+Então, refaço o gráfico com outra geometria:
+
+```{r}
+#| echo: true
+pinguins |> 
+  ggplot(aes( x = profundidade_bico, y = especie)) +
+  geom_boxplot()+
+  geom_line(colour = "#3366FF", alpha = 0.5)
+
+
+```
+
+Apenas lembrando que: 1) existe alguns problemas com o histograma (legenda, número de observações) - para mais detalhes, os capítulos a diante explicarão em detalhe como construir o histograma adequado. Você pode assistir também o conteúdo do canal @estatisticaaplicada da Fernanda Peres. Hoje não vamos falar como é possível  fazer as melhorias neste gráfico.
+
+**5. Por que o seguinte erro ocorre e como você poderia corrigi-lo?**
+
+```{r}
+#| echo: true
+
+#ggplot
+#(data = pinguins) +
+#geom_point
+```
+
+Resposta:
+
+Faltou incluir a aes (que são as propriedades visuais de como as variáveis serão apresentadas), definindo as variáveis no eixo x e y. Então, haverá o apontamento de um erro no seu console. O código corrigido seria:
+
+```{r}
+#| echo: true
+ggplot(data = pinguins, aes(x = comprimento_bico, y = profundidade_bico)) +
+geom_point()
+```
+
+**6. O que o argumento `na.rm` faz em `[geom_point()](https://ggplot2.tidyverse.org/reference/geom_point.html)`? Qual é o valor padrão do argumento? Crie um gráfico de dispersão em que você use esse argumento definido como `TRUE` (verdadeiro).**
+
+Resposta:
+O argumento na.rm confere as funções retirar ou não os valores NA, ou seja, valores faltantes.
+
+Veja o código:
+
+```{r}
+#| echo: true
+pinguins |>
+  ggplot(aes(x = comprimento_bico, y = profundidade_bico)) +
+  geom_point(na.rm = TRUE)
+```
+
+**7. Adicione a seguinte legenda ao gráfico que você criou no exercício anterior: “Os dados são provenientes do pacote dados”. Dica: dê uma olhada na documentação da função labs().**
+
+```{r}
+#| echo: true
+pinguins |>
+  ggplot(aes(x = comprimento_bico, y = profundidade_bico)) +
+  geom_point(na.rm = TRUE) +
+  labs(
+    title = waiver(),
+    subtitle = waiver(),
+    caption = "Os dados são provenientes do pacote dados")
+
+
+
+```
+
+Caso queira alterar a legenda do lado direito para o esquerdo, adicione "theme":
+
+```{r}
+#| echo: true
+
+pinguins |>
+  ggplot(aes(x = comprimento_bico, y = profundidade_bico)) +
+  geom_point(na.rm = TRUE) +
+  labs(
+    title = "Título",
+    subtitle = "Subtítulo",
+    caption = "Os dados são provenientes do pacote dados")+
+  theme(plot.caption.position = "plot",
+      plot.caption = element_text(hjust = 0))
+```
+
+**8. Recrie a visualização a seguir. Para qual atributo estético profundidade_bico deve ser mapeada? E ela deve ser mapeada no nível global ou no nível da geometria?**
+
+```{r}
+#| echo: true
+ggplot(pinguins, aes(comprimento_nadadeira, massa_corporal,)) +
+  geom_point(aes(color = profundidade_bico))+
+  geom_smooth()+ 
+  labs(
+    color = "profundidade_bico")
+```
+
+```{r}
+#| echo: true
+# simplificado sem smooth
+ggplot(pinguins, aes(comprimento_nadadeira, massa_corporal,)) +
+  geom_point(aes(color = profundidade_bico))+
+  labs(
+    color = "profundidade_bico")
+```
+
+**9. Execute esse código em sua mente e preveja como será o resultado. Em seguida, execute o código no R e verifique suas previsões.**
+
+```{r}
+#| echo: true
+ggplot(  data = pinguins,
+  mapping =aes(x = comprimento_nadadeira, y = massa_corporal, color = ilha)) +geom_point() +geom_smooth(se = FALSE)
+```
+
+
+**10. Esses dois gráficos serão diferentes? Por que sim ou por que não?**
+
+```{r}
+#| echo: true
+
+
+ggplot( data = pinguins,
+ aes(x = comprimento_nadadeira, y = massa_corporal)) +
+geom_point() +
+geom_smooth()
+```
+
+```{r}
+#| echo: true
+
+
+#ggplot() +
+#geom_point(data = pinguins, aes(x = comprimento_nadadeira, y = massa_corporal)) +
+#geom_smooth(pinguins,aes(x = comprimento_nadadeira, y = massa_corporal))
+```
+
+Minha resposta:
+
+Sim, são diferentes, mas a forma de definir foi diferente.
+
+No primeiro gráfico o mapeamento estético `aes()` está definido dentro camada global `ggplot()` e as duas geometrias `geom_point` e `geom_smooth` nas linhas camdas seguintes.
+
+Já no segundo, ambas geometrias têm os mesmos mapeamentos estéticos `aes()`, definidos dentro de cada geometria.
+
+
+
+
+### *1.3 Ggplot*
+
+Para fins de mais rapidez e clareza, omitiremos as palavras data e mapping dos argurmentos, reescrevendo os códigos de uma forma mais concisa:
+
+```{r}
+#| echo: true
+
+# código maior
+ggplot(
+  data = pinguins,
+  mapping = aes(x = comprimento_nadadeira, y = massa_corporal)
+) +
+  geom_point()
+
+
+# código mais conciso:
+ggplot(pinguins, aes(x = comprimento_nadadeira, y = massa_corporal)) +
+  geom_point()
+
+
+# ou com o uso do pipe
+pinguins |>
+	ggplot(aes(x = comprimento_nadadeira, y = massa_corporal)) +
+	geom_point()
+```
+
+### *1.4 Visualizando distribuições*
+
+A foma como você visualiza a distribuição de uma variável depende do tipo de variável, categórica ou numérica.
+
+-   ***Uma variável categórica***
+
+É definida como categórica se puder assumir um valor pequeno de conjunto de valores, podendo usar um grádico de barras `geom_bar`, onde a altura das barras exibe quantas observações ocorrem com cada valor x. Em gráficos de barras é possível reodernar as barras (de variável categóricas não ordenadas, como por exemplo, espécie ) transformando a variável em fator *(mais detalhes sobre fatores estará no capítulo 16):*
+
+```{r}
+#| echo: true
+
+
+# variável categórica não ordenada
+ggplot(pinguins, aes( x= especie))+
+	geom_bar()
+```
+
+```{r}
+#| echo: true
+
+
+# transformando uma categórica não ordenada em fator para reordenar
+#ggplot(pinguins, aes(fct_infreq() +
+#	geom_bar()
+
+```
+
+-   ***Uma variável númerica***
+
+Uma variável pode ser considerada númerica (ou quantitativa) se puder assumir um valor numérico ou , se for possível dazer operações matemáticas como adição, subtração ou médias. Podem ser variáveis númericas *contínuas* ou *discretas.* Entre as visualizações mais comum de variáveis contínuas é o histograma `geom_histogram.`
+
+```{r}
+#| echo: true
+
+
+# código para um histograma com o argumento binwidth de 200
+ggplot(pinguins, aes(x = massa_corporal)) +
+	geom_histogram(binwidth = 200)
+```
+
+É possível alterar a largura do intervalo do histograma com o argumento bindwidth na variável x. É importante observar essas larguras para não deixar estreito ou largo demais, e assim, dificultar a compreensão da distribuição. Uma visualização alternativa seria o gráfico de densidade geom_density que facilita a visualização da distribuição de forma rápida, principalmente em relação a moda e a àssimentria dos dados.
+
+```{r}
+#| echo: true
+
+
+#  código para um gráfico de densidade  
+ggplot(pinguins, aes(x = massa_corporal)) +
+	geom_density()
+```
+
+#### *Exercícios (1.4.3)*
+
+**1. Faça um gráfico de barras de especie de pinguins, no qual você atribui especie ao atributo estético y. Como esse gráfico é diferente?**
+
+Resposta: a barra ficará na posicionada na vertical
+
+```{r}
+#| echo: true
+
+
+pinguins |>
+  ggplot(aes(y= especie))+
+  geom_bar()
+```
+
+**2. Como os dois gráficos a seguir são diferentes? Qual atributo estético, color ou fill, é mais útil para alterar a cor das barras?**
+
+Resposta: O primeiro código com o argumento color dentro da camada `geom_bar` plota a linha de preenchimento na cor especificada, neste caso, vermelha.
+
+```{r}
+#| echo: true
+
+
+pinguins|>
+  ggplot(aes(x= especie))+
+  geom_bar(color = "red")
+```
+
+```{r}
+#| echo: true
+
+
+pinguins|>
+  ggplot(aes(x= especie))+
+  geom_bar(fill="red")
+```
+
+**3. O que o argumento `bins` em `[geom_histogram()](https://ggplot2.tidyverse.org/reference/geom_histogram.html)` faz?**
+
+Resposta: pela documentação `help(geom_histogram)` podemos entender que bins se refere aos quadrantes no eixo x. O argumento `bins` trata da quantidade de quadrantes que é definida.
+
+**4. Faça um histograma da variável `quilat`e no conjunto de dados `diamante` que está disponível quando você carrega o pacote dados. Faça experiências com diferentes larguras de intervalo *(binwidth)*. Qual largura de intervalo revela os padrões mais interessantes?**
+
+Resposta: esse primeiro código mostra a quantidade de bins padrão do r (30) e depois com 10. Mas esse argumento estava errado, pois pedia o binwidth . Interessantemente, com o argumento bins eu defino um número e o input de barras é a metade desse valor (quanto menor o número, menos colunas):
+
+```{r}
+#| echo: true
+
+
+diamante |>
+  ggplot(aes(x= quilate))+
+  geom_histogram(bins = 10)
+```
+
+Quando definimos bins em 20,15,10 e 5 temos os seguintes gráficos.
+
+Ja com o argumento binwidth , quanto menor o valor definido, maior é o número de colunas.
+
+```{r}
+#| echo: true
+
+
+diamante |>
+  ggplot(aes(x= quilate))+
+  geom_histogram(binwidth =  0.05)
+```
+
+Tentei aplicar o gráfico de densidade como segunda camada da visualização de barras, mas não funcionou. O gráfico de densidade dá certo quando a variável é numérica
+
+### *1.5 Visualizando Relações*
+
+Para visualizar uma relação, precisamos ter pelo menos duas variáveis mapeadas para os atributos estéticos de um gráfico. Os gráficos comumente usados para visualizar relações entre duas ou mais variáveis e as geometrias dependem das combinações entre tipos de variáveis.
+
+-   **Uma variável numérica e uma variável categórica**
+
+Para a visualização podemos utilizar um diagrama de caixa ou “boxplots”. Um boxplot mostra as medidas de posição (percentis) que descrevem um distribuição, e também possíveis outliers. Temos os seguintes elementos no boxplot:
+
+\- A primeira caixa: que indica o intervalo da metade intermediária dos dados, que é o interquartil (IIQ), que se estende do percentil 25° até o 75°;
+
+\- uma linha no meio da caixa que é a MEDIANA, ou seja 50° percentil, da distribuição (já mostrando se a dispersão é simétrica ou não em relação a mediana);
+
+-   a linha que se estende de cada extremidade da caixa até o ponto mais distante (sem ser o outlier)
+
+Exemplo
+
+```{r}
+#| echo: true
+
+
+ggplot(pinguins, aes(x = especie, y = massa_corporal)) +
+  geom_boxplot()
+```
+
+Ou podemos criar em um gráfico de densidade:
+
+```{r}
+#| echo: true
+
+
+pinguins |>
+  ggplot(aes (x =  massa_corporal, color = especie)) +
+  geom_density(linewidth = 0.75)
+
+```
+
+Podemos melhorar esse gráfico, adicionando atributos estéticos como color e fill, alpha para trabalhar com a transparência
+
+```{r}
+#| echo: true
+
+
+pinguins |>
+  ggplot(aes(x = massa_corporal, color = especie, fill= especie)) +
+  geom_density(alpha = 0.5, linewidth = 0.75)
+```
+
+-   **Duas variáveis categóricas**
+
+Para visualizar duas variáveis categóricas, podemos usar gráfico de barras empilhadas, porém para ajustar de forma melhor o percentual a cada grupo de x, podemos aplicar o argumentos position na geometria :
+
+```{r}
+#| echo: true
+
+
+pinguins |>
+  ggplot(aes(x = ilha, fill = especie)) +
+  geom_bar(position = "fill")
+```
+
+Observamos que esse é um ajuste de frequência relativa, onde podemos comparar melhor as distribuições de espécie entre ilhas. Tal ajuste é feito dentro no atributo estético `x` para a separação entre as barras e a variável cores dentro de `fill.`
+
+-   **Duas variáveis numéricas**
+
+Geralmente , o gráfico de dispersão é o gráfico mais usado para visualizar a relação entre duas variáveis numéricas:
+
+```{r}
+#| echo: true
+
+
+pinguins |>
+  ggplot(aes( x = comprimento_nadadeira, y = massa_corporal))+
+  geom_point()
+```
+
+-   **Três ou mais variáveis**
+
+Para incorporar mais variávis em um gráfico nomeamos-na em atributos estéticos adicionais, por exemplo a seguir , as `color` dos pontos representam espécies e as formas dos pontos `shape` representam ilhas:
+
+```{r}
+#| echo: true
+
+
+pinguins |>
+  ggplot(aes( x= comprimento_nadadeira, y= massa_corporal)) +
+  geom_point(aes(color = especie, shape = ilha))
+```
+
+```{r}
+
+#| echo: true
+# um modo melhor de visualizar é dividir o gráfico em facetas
+
+pinguins |>
+  ggplot(aes( x= comprimento_nadadeira, y= massa_corporal)) +
+  geom_point(aes(color = especie, shape = especie))+
+  facet_wrap(~ilha)
+```
+
+#### *Exercícios (1.5.5)*
+
+**1. O data frame milhas que acompanha o pacote dados contém observações 234 coletadas pela Agência de Proteção Ambiental dos EUA em modelos de 38 carros. Quais variáveis em milhas são categóricas? Quais variáveis são numéricas? (Dica: digite ?milhas para ler a documentação do conjunto de dados.) Como você pode ver essas informações ao executar milhas?**
+
+Para a visualização podemos utilizar os comandos listados no início do capítulo
+
+```{r}
+#| echo: true
+dados::milhas
+
+```
+
+```{r}
+#| echo: true
+
+
+glimpse(milhas)
+
+## glimpse" uma visualização alternativa, onde você pode
+
+## ver todas as variáveis e as primeiras observações de cada variável
+
+## no RStudio, execute View(milhas) para abrir um visualizador de
+
+## dados interativo
+
+View(milhas)
+
+## para saber mais sobre execute ajuda com ?milhas
+
+?milhas
+
+
+```
+
+`fabricante` = *Nome do fabricante*
+
+`modelo` = *Nome do modelo*
+
+`cilindrada` = *Capacidade do motor, em litros*
+
+`ano` = *Ano de fabricação*
+
+`cilindros` = *Número de cilindros*
+
+`transmissao` = *Tipo de transmissão*
+
+`tracao` = *Tipo de tração (d = dianteira, t = traseira, 4 = 4x4)*
+
+`cidade` = *Milhas da cidade por galão*
+
+`rodovia` = *Milhas rodoviárias por galão*
+
+`combustivel` = *Tipo de combustível (p = premium, r = regular, e = etanol, d = diesel, g = gás natural comprimido)*
+
+`classe` = *tipo de carro*
+
+As variáveis categóricas desse data frame são: fabricante (manufa),classe (class) , combustível (fl), tração (drv), modelo (model), transmissão (trans).
+
+As variáveis númericas: cilindrada (displ), ano (year), cilindros (cyl), cidade (cty), rodovia (hwy).
+
+**2. Faça um gráfico de dispersão de rodovia (Milhas rodoviárias por galão) em função de cilindrada usando o data frame milhas. Em seguida, mapeie uma terceira variável numérica para color (cor), depois size (tamanho), depois igualmente para color e size e, por fim, shape (forma). Como esses atributos estéticos se comportam de forma diferente para variáveis categóricas e numéricas?**
+
+A diferença é que uma variável numérica não funciona com a estética de `shape`, enquanto a categórica sim.
+
+```{r}
+#| echo: true
+
+
+ggplot(
+  milhas,
+  aes(x = rodovia, y = cilindrada, color = cidade)) +
+  geom_point()
+# é díficil de identificar a diferença em variáveis númericas
+```
+
+```{r}
+#| echo: true
+
+
+ggplot(
+  milhas,
+  aes(x = rodovia, y = cilindrada, size = cidade)) +
+  geom_point()
+
+# é díficil de identificar a diferença em variáveis númericas
+
+```
+
+```{r}
+#| echo: true
+
+
+ggplot(
+  milhas,
+  aes(x = rodovia, y = cilindrada, size = cidade, color = cidade))+
+  geom_point()
+
+
+# é díficil de identificar a diferença em variáveis númericas
+
+```
+
+```{r}
+#| echo: true
+
+
+ggplot(
+  milhas,
+  aes(x = rodovia, y = cilindrada, size = tracao, color = tracao, shape = tracao))+
+  geom_point()
+
+ 
+# esse não é o melhor gráfico... mas mostra inserindo a terceira variável categórica
+
+```
+
+
+Cores, pode ser usado tanto em categórica, quanto numéricas, porém um número menor de variáveis é melhor para apresentar o contraste correto (exceções como heatmaps, precipitação por exemplo)
+
+**3 .No gráfico de dispersão de rodovia vs. cilindrada, o que acontece se você mapear uma terceira variável para linewidth (espessura da linha)?**
+
+```{r}
+#| echo: true
+
+
+ggplot(
+  milhas,
+  aes(x = rodovia, y = cilindrada))+
+  geom_point(linewidth = 50)
+
+# assim não acontence nada
+```
+
+```{r}
+#| echo: true
+
+
+ggplot(
+  milhas,
+  aes(x= rodovia, y= cilindrada, linewidth = cidade)) +
+  geom_point()
+
+
+```
+
+**4. O que acontece se você mapear a mesma variável para várias atributos estéticos?**
+
+```{r}
+#| echo: true
+
+
+ggplot(
+  milhas,
+  aes(x= rodovia, y= rodovia, color = rodovia)) +
+  geom_point()
+
+
+# permite plotar o mapa com as variáveis em vários atributos estéticos , mas o resultado não é útil.0
+```
+
+**5. Faça um gráfico de dispersão de profundidade_bico vs. comprimento_bico e pinte os pontos por especie. O que a adição da coloração por especie revela sobre a relação entre essas duas variáveis? E quanto à separação em facetas por especie?**
+
+```{r}
+#| echo: true
+
+
+
+ggplot(
+  pinguins,
+  aes( x= comprimento_bico, y = profundidade_bico)) +
+  geom_point(aes(color = especie)) +
+  facet_wrap(~especie)
+
+```
+
+A cor revela que existe concentrações de dados de profundidade e comprimento de bico, de acordo com a espécie. Com o segundo gráfico é possível visualizar essas concentrações.
+
+**6. Por que o seguinte código produz duas legendas separadas? Como você corrigiria isso para combinar as duas legendas?** 
+
+Esse exercício está dando o código correto, ao invés de dar o código errado para ser corrigido.
+
+De toda forma, quando repetimos `color = specie`, `shape = specie` em `labs` gerará incorretamente duas legendas. É necessário inserir apenas em `color` na camada `labs`.
+
+```{r}
+#| echo: true
+
+
+ggplot(
+  pinguins, 
+  aes( x = comprimento_bico, 
+       y = profundidade_bico,
+       color = especie, 
+       shape = especie)) + 
+  geom_point() + 
+  labs(color = "especie",
+       shape = "espécie")
+```
+
+```{r}
+#| echo: true
+
+
+ggplot(
+  pinguins, 
+  aes( x = comprimento_bico, 
+       y = profundidade_bico,
+       color = especie, 
+       shape = especie)) + 
+  geom_point() + 
+  labs(color = "especie")
+```
+
+**7. Crie os dois gráficos de barras empilhadas a seguir. Que pergunta você pode responder com o primeiro? Que pergunta você pode responder com o segundo?**
+
+```{r}
+#| echo: true
+
+
+ggplot(
+  pinguins, 
+  aes(x = ilha, fill = especie)) +
+  geom_bar(position = "fill") 
+```
+
+No primeito gráfico, vejo a diferença percentual de cada espécie em cada uma das ilhas.
+
+```{r}
+#| echo: true
+
+
+ggplot(
+  pinguins, 
+  aes(x = especie, fill = ilha)) +
+  geom_bar(position = "fill")
+```
+
+Visualizamos a distribuição percentual nas ilhas por espécie.
+
+#### 1.6 Salvando seus gráficos
+
+Depois de criar um gráfico, você pode salvá-lo como uma imagem através da função `ggsave()`:
+
+```{r}
+
+#| echo: true
+
+
+ggplot(pinguins, aes(x = comprimento_nadadeira, y = massa_corporal)) +
+  geom_point()
+ggsave(filename = "penguin-plot.png")
+```
+
+#### *Exercícios(1.6.1)*
+
+**1. Execute as seguintes linhas de código. Qual dos dois gráficos é salvo como grafico-milhas.png? Por quê?**
+
+```{r}
+#| echo: true
+
+
+ggplot(
+  milhas, aes(x = classe)) + 
+  geom_bar()
+```
+
+```{r}
+
+#| echo: true
+ggplot(
+  milhas,
+  aes(x = cidade, y = rodovia)) + 
+  geom_point() 
+
+ggsave("grafico-milhas.png")
+
+
+```
+
+Foi salvo o segundo gráfico.
+
+**2. O que você precisa alterar no código acima para salvar o gráfico como PDF em vez de PNG? Como você poderia descobrir quais tipos de arquivos de imagem funcionariam em ggsave()?**
+
+```{r}
+#| echo: true
+?ggsave
+
+
+
+ggplot(
+  milhas,
+  aes(x = cidade, y = rodovia)) + 
+  geom_point() 
+
+ggsave("grafico-milhas.pdf")
+
+```
+
+#### 1.7 Problemas Comuns
+
+Todo mundo enfrenta problemas ao executar um código em R. Aqui estão algumas dicas:
+
+-   Compare seu código com o código do livro
+
+-   Observe se todos parentêses estão completos
+
+-   Se ver o + no seu console, o R está aguardando uma expressão completa
+
+-   O posicionamento do + no ggplot no final da linha
+
+-   Use o painel Help para obter ajuda ou `?nome_da_função` no console
+
+-   Leia atentamente o erro, e faça uma busca no google
+
+#### 1.8 Resumo
+
+Neste capítulo, você aprendeu os fundamentos da visualização de dados com o ggplot2. Começamos com a ideia básica que sustenta o ggplot2: uma visualização é um mapeamento de variáveis em seus dados para atributos estéticos como posição (*position*), cor (*color*), tamanho (*size*) e forma (*shape*). Em seguida, você aprendeu a aumentar a complexidade e melhorar a apresentação de seus gráficos camada por camada. Você também aprendeu sobre gráficos comumente usados para visualizar a distribuição de uma única variável, bem como para visualizar relações entre duas ou mais variáveis ao utilizar mapeamentos de atributos estéticos adicionais e/ou dividindo seu gráfico em pequenos gráficos usando facetas.
+
+Usaremos as visualizações repetidamente ao longo deste livro, introduzindo novas técnicas à medida que precisarmos delas, além de nos aprofundarmos na criação de visualizações com o ggplot2 em [Capítulo 9](https://cienciadedatos.github.io/pt-r4ds/layers.html) por meio da [Capítulo 11](https://cienciadedatos.github.io/pt-r4ds/communication.html).
+
+Com as noções básicas de visualização em seu currículo, no próximo capítulo mudaremos um pouco a direção e daremos algumas orientações práticas sobre o fluxo de trabalho. Intercalamos conselhos sobre fluxo de trabalho com ferramentas de ciência de dados ao longo desta parte do livro, pois isso te ajudará a manter a organização à medida que você escreve quantidades cada vez maiores de código em R.
