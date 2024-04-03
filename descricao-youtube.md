@@ -6,4 +6,4 @@ Iremos usar a versão que está sendo traduzida para português, disponível gra
 
 Clube do livro organizado por R-Ladies São Paulo, liderado por Beatriz Milz e Luana Antunes.
 
-Saiba mais em: https://github.com/R-Ladies-Sao-Paulo/2024-clube-do-livro-r4ds
+Saiba mais em: https://docs.google.com/document/d/1xCn5gxK47tj9lRpDovwGNlza9i1FX2VBixo1V7VtUUs/edit?usp=sharing
