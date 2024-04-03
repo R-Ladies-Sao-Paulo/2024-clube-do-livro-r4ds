@@ -1,4 +1,4 @@
-Esse é o primeiro encontro do clube do livro R for Data Science (2 edição)!
+Esse é o [xxxx] encontro do clube do livro R for Data Science (2 edição)!
 
 Esse livro foi escrito por Hadley Wickham (criador do ggplot2), Mine Çetinkaya-Rundel, e Garrett Grolemund.
 
