@@ -21,6 +21,8 @@ Com essas informações, esses são os passos necessários:
 
 - [ ] Verificar se as informações acima já estão atualizadas aqui: https://github.com/R-Ladies-Sao-Paulo/2024-clube-do-livro-r4ds
 
+- [ ] Solicitar a bio e foto da pessoa que irá apresentar (é usado no Meetup)
+
 - [ ] No Canva (na conta da R-Ladies SP), já temos um template para a imagem de divulgação. É necessário duplicar a imagem e alterar as informações relevantes (número do encontro, tema, etc).
 
 - [ ] Criar o encontro no Streamyard (isso é necessário para a transmissão no Youtube). Recomendamos olhar o último evento do clube do livro, e seguir o padrão utilizado (nomenclatura, etc). @beatrizmilz
