@@ -15,6 +15,8 @@ voos
 # cada linha representa um voo
 ?voos # documentacao
 
+# Obter uma visão geral da estrutura da base de dados
+# Exibe a estrutura da base, com número de linhas e colunas, e tipos de dados
 glimpse(voos)
 # Rows: 336,776
 # Columns: 19
@@ -40,21 +42,29 @@ glimpse(voos)
 
 # Estrutura ---------
 
+# As funções do pacote dplyr seguem a seguinte estrutura:
+
 # funcao(base_de_dados, quais_colunas_vamos_usar)
-# resulta em uma base de dados alterada
+
+# E resulta em uma base de dados alterada
 
 voos 
+
+# Exemplo: usando a base de dados voos, queremos filtrar apenas voos com destino para IAH.
 
 # base de dados: voos
 # colunas que vamos usar: destino == "IAH"
 # retorno: base filtrada
 filter(voos, destino == "IAH")
 
-# pipe |> (atalho: ctrl shift M)
+# Pipe ----
+
+# O operador pipe |> auxilia a conectar as operações
+# Atalho: ctrl + shift + M
 voos |> 
   filter(destino == "IAH")
 
-# exemplo
+# Exemplo: 
 atraso_chegada_diario <- voos |> 
   filter(destino == "IAH") |> 
   select(ano, mes, dia, destino, atraso_chegada) |> 
@@ -63,15 +73,16 @@ atraso_chegada_diario <- voos |>
     media_atraso_chegada = mean(atraso_chegada, na.rm = TRUE)
   )
 
-
-# Linhas ----------------
+# Verbos do dplyr para trabalhar com linhas -----------
 # filter() - filtrar as linhas
 # arrange() - ordernar a base de dados
 # distinct() - busca valores únicos/distintos
 # count() - conta quantas linhas tem por grupo
 
 ## filter --------
-# operadores
+# função filter é para filtrar LINHAS
+
+# operadores importantes
 # == - igual à
 # != - diferente
 # > - maior que
@@ -79,13 +90,16 @@ atraso_chegada_diario <- voos |>
 # >= - maior ou igual à
 # <= - menor ou igual à
 
+# Filtrar voos que tiveram um atraso de saída maior que 120
 voos |> 
   filter(atraso_saida > 120) |> 
   view()
 
+# Filtrar voos que tiveram um atraso de saída MAIOR OU IGUAL à 120
 voos |> 
   filter(atraso_saida >= 120) |> 
   view()
+
 
 # voos que partiram dia 1 de janeiro
 # operador AND - & ou a vírgula
@@ -103,19 +117,22 @@ voos |>
   view()
 
 # voos que partiram no primeiro semestre
-# operador %in%
+# operador %in% (faz parte do conjunto)
 
 voos |> 
   filter(mes %in% c(1:6)) |> 
   view()
 
-# operador not !
+# operador not ! (negação)
 
 voos |> 
   filter(! mes %in% c(1, 2))
 
 # erros comuns ao usar filter
 
+# Erro 1: uso de '=' ao invés de '=='
+
+# Errado:
 voos |> 
   filter(mes = 1)
 
@@ -123,55 +140,66 @@ voos |>
 # ℹ This usually means that you've used `=` instead of `==`.
 # ℹ Did you mean `mes == 1`?
 
+# Correto:
 voos |> 
   filter(mes == 1)
 
-# erro comum 2
+# Erro 2: Usar o OU de forma incorreta. ATENÇÃO, não gera erro, e o resultado é incorreto.
 
+# Errado:
 voos |> 
   filter(mes == 1 | 2) |> 
   distinct(mes)
 
-# certo:
+# Certo:
 voos |> 
   filter(mes == 1 | mes == 2) 
 
-# certo:
+# Certo:
 voos |> 
   filter(mes %in% c(1, 2)) 
 
 ## arrange --------------
-# reordena as linhas
+# Função arrange() para ordenar os dados
 
+
+# Ordena os voos de forma crescente, utilizando a coluna atraso_saida
 voos |> 
-  arrange(atraso_saida) # ordena de forma crescente
+  arrange(atraso_saida) 
 
+
+# Ordena os voos de forma crescente, utilizando as colunas: ano, mes, dia, atraso_saida
 voos |> 
   arrange(ano, mes, dia, atraso_saida)
 
+# Ordena os voos de forma decrescente, utilizando a coluna atraso_saida
 voos |> 
   arrange(desc(atraso_saida)) # ordena de forma decrescente
 
+# Ordena os voos de forma decrescente, utilizando a coluna atraso_saida
 voos |> 
   arrange(-atraso_saida) # ordena de forma decrescente
 
 
-# quais sao os 10 atrasos maiores
+# Quais são os 10 voos com maiores atrasos?
 voos |> 
-  arrange(desc(atraso_saida)) |> 
-  head(10) |> 
-  mutate(atraso_saida_hora = atraso_saida/60) |> 
+  arrange(desc(atraso_saida)) |> # organizando em forma decrescente
+  head(10) |>  # buscando as 10 primeiras linhas
+  mutate(atraso_saida_hora = atraso_saida/60) |>  # transformando em horas
   view()
 
+# Cuidado, o arrange ordena colunas `chr()` em ordem alfabética
 voos |> 
   select(ano, mes, dia, origem, atraso_saida) |> 
   arrange(origem, atraso_saida) # ordem alfabética
 
-## distinct()
+## distinct() -----------------
 
+# Função distinct() para buscar valores distintos em uma coluna (ou conjunto de colunas)
 voos |> 
   distinct()
 
+# Seleciona combinações distintas de origem e destino
 voos |> 
   distinct(origem, destino) 
 
@@ -180,36 +208,39 @@ voos |>
   arrange(origem, destino) |> 
   view()
 
+# O argumento .keep_all = TRUE permite manter as outras colunas
+# Mantém todas as colunas ao selecionar combinações distintas
 voos |> 
   distinct(origem, destino, .keep_all = TRUE)
 
 
-# qual a diferença entre unique() e distinct()
-# unique() - r base
-# distinct() - dplyr
+# Dúvida: qual a diferença entre unique() e distinct()?
+# unique() - r base, trabalha com vetores
+# distinct() - dplyr, trabalha com tibble
 
-# nao funciona
-#voos |> 
+# Não funciona
+# voos |> 
 #  unique(origem)
 
 unique(voos$origem)
 
 ## count() ----
-
+# Função count() para contagem de ocorrências
 voos |> 
   count(origem, destino)
 
+
+# Ordena a contagem de ocorrências de origem e destino, ordenando de forma decrescente
 voos |> 
   count(origem, destino, sort = TRUE)
 
 
-# qual dos 3 aeroportos de nyc tinha mais destinos disponíveis em 2013?
-
+# Quantos destinos disponíveis para cada aeroporto de NYC em 2013?
 voos |> 
   distinct(origem, destino) |> 
   count(origem, sort = TRUE)
 
-
+# Contagem de voos por companhia aérea, ordenado e gráfico de barras
 voos |> 
   count(companhia_aerea, sort = TRUE) |>
   head(10) |> 
