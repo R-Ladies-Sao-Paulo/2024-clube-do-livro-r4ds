@@ -1,3 +1,5 @@
+## Encontro 6: Transformação de dados (pacote dplyr) (Pt. 2) - Clube do Livro R for Data Science (2ed)
+
 Esse é um encontro do clube do livro R for Data Science (2 edição)!
 
 Esse livro foi escrito por Hadley Wickham (criador do ggplot2), Mine Çetinkaya-Rundel, e Garrett Grolemund.
