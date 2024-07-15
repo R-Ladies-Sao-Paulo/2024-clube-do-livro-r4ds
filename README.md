@@ -31,6 +31,6 @@ No encontro, a ideia é que uma pessoa faça uma apresentação sobre o capítul
 |    5     |  24/06/2024  - 19h | [Transformação de dados](https://cienciadedatos.github.io/pt-r4ds/data-transform.html)  - Parte 1 | Beatriz Milz | 
 |    6     |  11/07/2024  - 19h | [Transformação de dados](https://cienciadedatos.github.io/pt-r4ds/data-transform.html)  - Parte 2 | Beatriz Milz
 |    7     |  22/07/2024  - 19h | [Transformação de dados](https://cienciadedatos.github.io/pt-r4ds/data-transform.html)  - Parte 3 | Beatriz Milz
-|    8     |  26/08/2024 - 19h (a confirmar)      |                                                                                     [Organização de dados](https://cienciadedatos.github.io/pt-r4ds/data-tidy.html)                                                                                      |         |
-|    9     |    ??  |                                                                                     [Importação de dados](https://cienciadedatos.github.io/pt-r4ds/data-import.html)                                                                                     |            |
+|    8     |  06/08/2024 - 19h  | [Organização de dados](https://cienciadedatos.github.io/pt-r4ds/data-tidy.html)  | Angélica Custódio |
+|    9     |    ??  |[Importação de dados](https://cienciadedatos.github.io/pt-r4ds/data-import.html) | ??? |
 
