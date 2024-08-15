@@ -1,0 +1,107 @@
+---
+title: "Resumo do capítulo - Organização de dados"
+subtitle: "Clube do Livro - R Para Ciência de Dados (2ª Edição)"
+author: "Angélica Custódio"
+date: 2024-08-06
+format: revealjs
+lang: pt
+---
+
+## Preparação: Pacotes
+
+Esse capítulo foca bastante no _tidyr_, que faz parte do grupo de pacotes do _tidyverse_.
+
+```{r echo=TRUE}
+#| eval: false
+# Instalando "tidyverse"
+install.packages("tidyverse")
+
+# Instalando "dados"
+remotes::install_github("cienciadedatos/dados")
+```
+
+## "Dados bagunçados são bagunçados à sua maneira"
+
+```{r echo=FALSE, out.width="100%",  fig.align='center'}
+knitr::include_graphics("https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/6e297111-efb7-4555-93d2-085071d1853c.jpg?h=6495be6d4c37f1148bd0148bc7458a13")
+```
+[Ilustração - Allison Horst](https://allisonhorst.com/other-r-fun)
+
+## Dados _tidy_
+
+Existem três regras interrelacionadas que fazem com que um conjunto de dados seja considerado tidy:
+
+- Cada variável é uma coluna; cada coluna é uma variável.
+
+- Cada observação é uma linha; cada linha é uma observação.
+
+- Cada valor é uma célula; cada célula é um único valor.
+
+
+_dplyr_, _ggplot2_ e os demais pacotes do tidyverse foram pensados para trabalhar com _dados tidy_.
+
+## Dados _tidy_ 
+
+```{r echo=FALSE, out.width="100%",  fig.align='center'}
+knitr::include_graphics("https://cienciadedatos.github.io/pt-r4ds/images/tidy-1.png")
+```
+
+
+## Exercícios
+
+Abordando os exercícios [nessa seção](https://cienciadedatos.github.io/pt-r4ds/data-tidy.html#exerc%C3%ADcios).
+
+1) Para cada uma das tabelas do exemplo, descreva o que cada observação e cada coluna representa.
+
+## Exercícios
+
+2) Faça um esboço do processo que você usaria para calcular taxa para a tabela2 e tabela3. Você precisará executar quatro operações:
+
+- Extrair o número de casos de tuberculose por país por ano.
+- Extrair a população correspondente por país por ano.
+- Dividir os casos pela população e multiplicar por 10000.
+- Armazenar de volta no local apropriado.
+
+## _pivot_longer()_
+
+
+```{r echo=FALSE, out.width="100%",  fig.align='center'}
+knitr::include_graphics("https://cienciadedatos.github.io/pt-r4ds/diagrams/tidy-data/column-names.png ")
+```
+
+## _pivot_wider()_
+
+Utilizá-lo torna o conjunto de dados mais largo (wider), aumentando o número de colunas e diminuindo o número de linhas. 
+
+É muito útil quando uma informação está espalhada em múltiplas linhas.
+
+```{r echo=FALSE, out.width="100%",  fig.align='center'}
+knitr::include_graphics("pivot_wider_ex.png")
+```
+
+## Como definir a versão tidy?
+
+Pode ser impossível especificar se a versão longa (long) ou larga (wide) é a versão tidy. 
+
+O recomendado é seguir com uma tabela organizada que faça sentido para o uso necessário.
+
+```{r echo=FALSE, out.width="100%",  fig.align='center'}
+knitr::include_graphics("https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/20dce8ef-f4bb-49ce-b084-81d677a0b4fc_rw_1920.jpg?h=b54b00e7e53d92de2fd8674c940321f9")
+```
+[Ilustração - Allison Horst](https://allisonhorst.com/other-r-fun)
+
+
+## Seguimos felizes com os dados organizados
+
+```{r echo=FALSE, out.width="100%",  fig.align='center'}
+knitr::include_graphics("https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/40488240-4609-4dc3-8920-693e078b55ce_rw_1920.jpg?h=2e96a7e21e19c43867546498da026649")
+```
+[Ilustração - Allison Horst](https://allisonhorst.com/other-r-fun)
+
+# Referências
+
+- [Wickham, H. . (2014). Tidy Data. Journal of Statistical Software](https://www.jstatsoft.org/article/view/v059i10)
+
+- [Data tidying with tidyr::Cheatsheet](https://www.google.com/search?q=cheat+sheet+tidyr&oq=cheat+sheet+tidyr&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIKCAEQABgTGBYYHjIKCAIQABgTGBYYHjIKCAMQABgTGBYYHjIKCAQQABiABBiiBDIKCAUQABiABBiiBNIBCDUzMjBqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#:~:text=Data%20tidying%20with,%E2%80%BA%20rstudio%20%E2%80%BA%20main)
+
+- [Illustrations from the Openscapes blog Tidy Data for reproducibility, efficiency, and collaboration - by Julia Lowndes and and Allison Horst](https://allisonhorst.com/other-r-fun)
