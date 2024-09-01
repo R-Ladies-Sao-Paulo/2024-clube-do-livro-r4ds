@@ -37,10 +37,13 @@ Com essas informações, esses são os passos necessários:
    - [ ] Instagram
    - [ ] Linkedin
    - [ ] Telegram
+   - [ ] Aba comunidade do Youtube
 
 - [ ] Checar se na [lista de presença](https://drive.google.com/drive/folders/10eZe552leUOv4jS1CNfHVoivjoUHiIN8?usp=sharing) apresenta a opção para o encontro
 
 - [ ] Preparar slide do início do evento (modelo no canva)
+
+- [ ] Adicionar o encontro no [arquivo compartilhado](https://docs.google.com/document/d/1xCn5gxK47tj9lRpDovwGNlza9i1FX2VBixo1V7VtUUs/edit?usp=sharing) com links, slides, etc
 
 # Pós-encontro
 
