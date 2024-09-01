@@ -2,9 +2,13 @@
 
 Clube do livro [R for Data Science](https://r4ds.hadley.nz/) (R4DS) (2 edição), escrito por Hadley Wickham, Mine Çetinkaya-Rundel, e Garrett Grolemund.
 
-Iremos usar a versão que está sendo traduzida para português, disponível em <https://cienciadedatos.github.io/pt-r4ds/>.
+Usamos a versão que está sendo traduzida para português, disponível em <https://cienciadedatos.github.io/pt-r4ds/>.
 
 Organizado por [R-Ladies São Paulo](https://rladies-sp.org), liderado por [Beatriz Milz](https://github.com/beatrizmilz/) e [Luana Antunes](https://github.com/Luaaalex).
+
+**[Acesse o arquivo compartilhado com materiais de todos os encontros!](https://docs.google.com/document/d/1xCn5gxK47tj9lRpDovwGNlza9i1FX2VBixo1V7VtUUs/edit?usp=sharing)**
+
+
 
 ## Formato
 
@@ -15,10 +19,6 @@ Em cada mês, teremos um capítulo (ou mais de um, no caso de capítulos mais cu
 De preferência, as pessoas devem ler o capítulo **antes** do encontro.
 
 No encontro, a ideia é que uma pessoa faça uma apresentação sobre o capítulo (não precisa necessariamente ser com slides, mas a ideia é repassar os principais conceitos do capítulo no encontro), e depois abrimos para discussão, dúvidas, entre outros.
-
-## Pontos a definir
-
--   **Definir:** quem vai apresentar cada capítulo.
 
 ## **Parte 1**: "Visão geral".
 
