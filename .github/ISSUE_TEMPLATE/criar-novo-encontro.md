@@ -1,7 +1,7 @@
 ---
 name: Criar novo encontro
 about: Tarefas para criar um novo encontro
-title: Encontro 00
+title: 'Encontro XX - mes/2024 - Seção livro - Nome capítulo'
 labels: ''
 assignees: ''
 
@@ -11,7 +11,6 @@ assignees: ''
 
 - Antes de criar o encontro, é bom já ter definido:
    - [ ] Qual é o capítulo do livro a ser abordado no encontro?
-   - [ ] O capítulo está traduzido?
    - [ ] Quem vai apresentar?
    - [ ] Qual será o dia e horário que o encontro vai acontecer? (que funcione para quem vai apresentar)
 
