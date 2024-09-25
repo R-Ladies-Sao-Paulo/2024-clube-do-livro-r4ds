@@ -34,3 +34,12 @@ No encontro, a ideia é que uma pessoa faça uma apresentação sobre o capítul
 |    8     |  06/08/2024 - 19h  | [Organização de dados](https://cienciadedatos.github.io/pt-r4ds/data-tidy.html)  | Angélica Custódio |
 |    9     |    19/09/2024 - 19h  |[Importação de dados](https://cienciadedatos.github.io/pt-r4ds/data-import.html) | Cecília Rocha |
 
+
+## **Parte 2**: "Visualizar".
+
+| Encontro | Data | Capítulo(s)/Tema | Quem apresenta |
+|:--------:|:--------:|:------------------------------:|:------------------:|
+|    10     | 07/10/2024 - 19h | [Camadas](https://cienciadedatos.github.io/pt-r4ds/layers.html) | Fernanda Fiel Peres |
+|    11     |  ?? | [Análise Exploratória de Dados](https://cienciadedatos.github.io/pt-r4ds/EDA.html) | ?? |
+|    12     | ?? | [Comunicação](https://cienciadedatos.github.io/pt-r4ds/communication.html) | ?? |
+
