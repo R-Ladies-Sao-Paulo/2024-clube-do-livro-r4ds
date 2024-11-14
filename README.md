@@ -20,7 +20,7 @@ De preferência, as pessoas devem ler o capítulo **antes** do encontro.
 
 No encontro, a ideia é que uma pessoa faça uma apresentação sobre o capítulo (não precisa necessariamente ser com slides, mas a ideia é repassar os principais conceitos do capítulo no encontro), e depois abrimos para discussão, dúvidas, entre outros.
 
-## **Parte 1**: "Visão geral".
+## **Parte 1**: "Visão geral"
 
 | Encontro | Data | Capítulo(s)/Tema | Quem apresenta |
 |:--------:|:--------:|:------------------------------:|:------------------:|
@@ -35,7 +35,7 @@ No encontro, a ideia é que uma pessoa faça uma apresentação sobre o capítul
 |    9     |    19/09/2024 - 19h  |[Importação de dados](https://cienciadedatos.github.io/pt-r4ds/data-import.html) | Cecília Rocha |
 
 
-## **Parte 2**: "Visualizar".
+## **Parte 2**: "Visualizar"
 
 | Encontro | Data | Capítulo(s)/Tema | Quem apresenta |
 |:--------:|:--------:|:------------------------------:|:------------------:|
@@ -44,3 +44,15 @@ No encontro, a ideia é que uma pessoa faça uma apresentação sobre o capítul
 |    12     |  ?? | [Análise Exploratória de Dados](https://cienciadedatos.github.io/pt-r4ds/EDA.html) | ?? |
 |    13     | ?? | [Comunicação](https://cienciadedatos.github.io/pt-r4ds/communication.html) | ?? |
 
+## **Parte 3**: "Transformar"
+
+| Encontro | Data | Capítulo(s)/Tema | Quem apresenta |
+|:--------:|:--------:|:------------------------------:|:------------------:|
+|   ??  | ?? | [Vetores Lógicos](https://cienciadedatos.github.io/pt-r4ds/logicals.html) | ?? |
+|   ??  | ?? | [Números](https://cienciadedatos.github.io/pt-r4ds/numbers.html) | ?? |
+|   ??  | ?? | [Strings](https://cienciadedatos.github.io/pt-r4ds/strings.html) | ?? |
+|   ??  | ?? | [Expressões Regulares](https://cienciadedatos.github.io/pt-r4ds/regexps.html) | ?? |
+|   ??  | ?? | [Fatores](https://cienciadedatos.github.io/pt-r4ds/factors.html) | ?? |
+|   ??  | ?? | [Datas e horas](https://cienciadedatos.github.io/pt-r4ds/datetimes.html) | ?? |
+|   ??  | ?? | [Valores faltantes](https://cienciadedatos.github.io/pt-r4ds/missing-values.html) | ?? |
+|   ??  | ?? | [Uniões (joins)](https://cienciadedatos.github.io/pt-r4ds/joins.html) | ?? |
