@@ -39,7 +39,8 @@ No encontro, a ideia é que uma pessoa faça uma apresentação sobre o capítul
 
 | Encontro | Data | Capítulo(s)/Tema | Quem apresenta |
 |:--------:|:--------:|:------------------------------:|:------------------:|
-|    10     | 07/10/2024 - 19h | [Camadas](https://cienciadedatos.github.io/pt-r4ds/layers.html) | Fernanda Fiel Peres |
-|    11     |  ?? | [Análise Exploratória de Dados](https://cienciadedatos.github.io/pt-r4ds/EDA.html) | ?? |
-|    12     | ?? | [Comunicação](https://cienciadedatos.github.io/pt-r4ds/communication.html) | ?? |
+|    10     | 07/10/2024 - 19h | [Camadas](https://cienciadedatos.github.io/pt-r4ds/layers.html) - Parte 1 | Fernanda Fiel Peres |
+|    11     | 11/12/2024 - 19h | [Camadas](https://cienciadedatos.github.io/pt-r4ds/layers.html) - Parte 2| Fernanda Fiel Peres |
+|    12     |  ?? | [Análise Exploratória de Dados](https://cienciadedatos.github.io/pt-r4ds/EDA.html) | ?? |
+|    13     | ?? | [Comunicação](https://cienciadedatos.github.io/pt-r4ds/communication.html) | ?? |
 
