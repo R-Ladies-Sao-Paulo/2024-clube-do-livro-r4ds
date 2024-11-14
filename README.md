@@ -56,3 +56,33 @@ No encontro, a ideia é que uma pessoa faça uma apresentação sobre o capítul
 |   ??  | ?? | [Datas e horas](https://cienciadedatos.github.io/pt-r4ds/datetimes.html) | ?? |
 |   ??  | ?? | [Valores faltantes](https://cienciadedatos.github.io/pt-r4ds/missing-values.html) | ?? |
 |   ??  | ?? | [Uniões (joins)](https://cienciadedatos.github.io/pt-r4ds/joins.html) | ?? |
+
+
+
+
+## **Parte 4**: "Importar"
+
+| Encontro | Data | Capítulo(s)/Tema | Quem apresenta |
+|:--------:|:--------:|:------------------------------:|:------------------:|
+|   ??  | ?? | [Planilhas](https://cienciadedatos.github.io/pt-r4ds/spreadsheets.html) | ?? |
+|   ??  | ?? | [Bancos de dados](https://cienciadedatos.github.io/pt-r4ds/databases.html) | ?? |
+|   ??  | ?? | [Arrow](https://cienciadedatos.github.io/pt-r4ds/arrow.html) | ?? |
+|   ??  | ?? | [Dados hierárquicos (rectangling)](https://cienciadedatos.github.io/pt-r4ds/rectangling.html) | ?? |
+|   ??  | ?? | [Raspagem de dados (Web scraping)](https://cienciadedatos.github.io/pt-r4ds/webscraping.html) | ?? |
+
+
+## **Parte 5**: "Programar"
+
+| Encontro | Data | Capítulo(s)/Tema | Quem apresenta |
+|:--------:|:--------:|:------------------------------:|:------------------:|
+|   ??  | ?? | [Funções](https://cienciadedatos.github.io/pt-r4ds/functions.html) | ?? |
+|   ??  | ?? | [Iteração](https://cienciadedatos.github.io/pt-r4ds/iteration.html) | ?? |
+|   ??  | ?? | [Um guia para o R base](https://cienciadedatos.github.io/pt-r4ds/base-R.html) | ?? |
+
+
+## **Parte 6**: "Comunicar"
+
+| Encontro | Data | Capítulo(s)/Tema | Quem apresenta |
+|:--------:|:--------:|:------------------------------:|:------------------:|
+|   ??  | ?? | [Quarto](https://cienciadedatos.github.io/pt-r4ds/quarto.html) | ?? |
+|   ??  | ?? | [Formatos para Quarto](https://cienciadedatos.github.io/pt-r4ds/quarto-formats.html) | ?? |
