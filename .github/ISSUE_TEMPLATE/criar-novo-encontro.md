@@ -47,3 +47,5 @@ Com essas informações, esses são os passos necessários:
 # Pós-encontro
 
 - [ ] Atualizar o [arquivo compartilhado](https://docs.google.com/document/d/1xCn5gxK47tj9lRpDovwGNlza9i1FX2VBixo1V7VtUUs/edit?usp=sharing) com links, slides, etc
+
+- [ ] Youtube: adicionar video na playlist
