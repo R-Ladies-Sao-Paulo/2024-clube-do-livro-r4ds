@@ -43,7 +43,7 @@ No encontro, a ideia é que uma pessoa faça uma apresentação sobre o capítul
 |    11     | 11/12/2024 - 19h | [Camadas](https://cienciadedatos.github.io/pt-r4ds/layers.html) - Parte 2| Fernanda Fiel Peres |
 |    12     | 11/02/2025 - 19h | [Análise Exploratória de Dados](https://cienciadedatos.github.io/pt-r4ds/EDA.html) - Parte 1 | Ariana Cabral |
 |    13     | 11/03/2025 - 19h | [Análise Exploratória de Dados](https://cienciadedatos.github.io/pt-r4ds/EDA.html) - Parte 2 | Ariana Cabral |
-|    15     | ?? | [Comunicação](https://cienciadedatos.github.io/pt-r4ds/communication.html) | Ligia Louzada |
+|    15     | 06/05/2025 - 19h | [Comunicação](https://cienciadedatos.github.io/pt-r4ds/communication.html) | Ligia Louzada |
 
 ## **Parte 3**: "Transformar"
 
