@@ -32,7 +32,7 @@ No encontro, a ideia é que uma pessoa faça uma apresentação sobre o capítul
 |    6     |  11/07/2024  - 19h | [Transformação de dados](https://cienciadedatos.github.io/pt-r4ds/data-transform.html)  - Parte 2 | Beatriz Milz
 |    7     |  29/07/2024  - 19h | [Transformação de dados](https://cienciadedatos.github.io/pt-r4ds/data-transform.html)  - Parte 3 | Beatriz Milz
 |    8     |  06/08/2024 - 19h  | [Organização de dados](https://cienciadedatos.github.io/pt-r4ds/data-tidy.html)  | Angélica Custódio |
-|    9     |    19/09/2024 - 19h  |[Importação de dados](https://cienciadedatos.github.io/pt-r4ds/data-import.html) | Cecília Rocha |
+|    9     |  19/09/2024 - 19h  |[Importação de dados](https://cienciadedatos.github.io/pt-r4ds/data-import.html) | Cecília Rocha |
 
 
 ## **Parte 2**: "Visualizar"
@@ -43,7 +43,7 @@ No encontro, a ideia é que uma pessoa faça uma apresentação sobre o capítul
 |    11     | 11/12/2024 - 19h | [Camadas](https://cienciadedatos.github.io/pt-r4ds/layers.html) - Parte 2| Fernanda Fiel Peres |
 |    12     | 11/02/2025 - 19h | [Análise Exploratória de Dados](https://cienciadedatos.github.io/pt-r4ds/EDA.html) - Parte 1 | Ariana Cabral |
 |    13     | 11/03/2025 - 19h | [Análise Exploratória de Dados](https://cienciadedatos.github.io/pt-r4ds/EDA.html) - Parte 2 | Ariana Cabral |
-|    15     | 06/05/2025 - 19h | [Comunicação](https://cienciadedatos.github.io/pt-r4ds/communication.html) | Ligia Louzada |
+|    15     | 14/05/2025 - 19h | [Comunicação](https://cienciadedatos.github.io/pt-r4ds/communication.html) | Ligia Louzada |
 
 ## **Parte 3**: "Transformar"
 
