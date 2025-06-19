@@ -1,7 +1,7 @@
 ---
 name: Criar novo encontro
 about: Tarefas para criar um novo encontro
-title: 'Encontro XX - mes/2024 - Seção livro - Nome capítulo'
+title: 'Encontro XX - mes/2025 - Seção livro - Nome capítulo'
 labels: ''
 assignees: ''
 
@@ -37,8 +37,6 @@ Com essas informações, esses são os passos necessários:
    - [ ] Linkedin
    - [ ] Telegram
    - [ ] Aba comunidade do Youtube
-
-- [ ] Checar se na [lista de presença](https://drive.google.com/drive/folders/10eZe552leUOv4jS1CNfHVoivjoUHiIN8?usp=sharing) apresenta a opção para o encontro
 
 - [ ] Preparar slide do início do evento (modelo no canva)
 
