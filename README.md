@@ -43,14 +43,14 @@ No encontro, a ideia é que uma pessoa faça uma apresentação sobre o capítul
 |    11     | 11/12/2024 - 19h | [Camadas](https://cienciadedatos.github.io/pt-r4ds/layers.html) - Parte 2| Fernanda Fiel Peres |
 |    12     | 11/02/2025 - 19h | [Análise Exploratória de Dados](https://cienciadedatos.github.io/pt-r4ds/EDA.html) - Parte 1 | Ariana Cabral |
 |    13     | 11/03/2025 - 19h | [Análise Exploratória de Dados](https://cienciadedatos.github.io/pt-r4ds/EDA.html) - Parte 2 | Ariana Cabral |
-|    15     | 14/05/2025 - 19h | [Comunicação](https://cienciadedatos.github.io/pt-r4ds/communication.html) | Ligia Louzada |
+|    15     | 10/06/2025 - 19h | [Comunicação](https://cienciadedatos.github.io/pt-r4ds/communication.html) | Ligia Louzada |
 
 ## **Parte 3**: "Transformar"
 
 | Encontro | Data | Capítulo(s)/Tema | Quem apresenta |
 |:--------:|:--------:|:------------------------------:|:------------------:|
 |   14  | 08/04/2025 | [Vetores Lógicos](https://cienciadedatos.github.io/pt-r4ds/logicals.html) | Beatriz Milz |
-|   ??  | ?? | [Números](https://cienciadedatos.github.io/pt-r4ds/numbers.html) | ?? |
+|   16  | 28/07/2025 | [Números](https://cienciadedatos.github.io/pt-r4ds/numbers.html) | Beatriz Milz |
 |   ??  | ?? | [Strings](https://cienciadedatos.github.io/pt-r4ds/strings.html) | ?? |
 |   ??  | ?? | [Expressões Regulares](https://cienciadedatos.github.io/pt-r4ds/regexps.html) | ?? |
 |   ??  | ?? | [Fatores](https://cienciadedatos.github.io/pt-r4ds/factors.html) | ?? |
