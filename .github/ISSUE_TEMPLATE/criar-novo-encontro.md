@@ -36,7 +36,7 @@ Com essas informações, esses são os passos necessários:
    - [ ] Instagram
    - [ ] Linkedin
    - [ ] Telegram
-   - [ ] Aba comunidade do Youtube
+   - [ ] [Aba comunidade/posts do Youtube](https://www.youtube.com/c/RLadiesS%C3%A3oPaulo/posts)
 
 - [ ] Preparar slide do início do evento (modelo no canva)
 
