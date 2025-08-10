@@ -55,7 +55,7 @@ No encontro, a ideia é que uma pessoa faça uma apresentação sobre o capítul
 |   ??  | ?? | [Expressões Regulares](https://cienciadedatos.github.io/pt-r4ds/regexps.html) | ?? |
 |   ??  | ?? | [Fatores](https://cienciadedatos.github.io/pt-r4ds/factors.html) | ?? |
 |   ??  | ?? | [Datas e horas](https://cienciadedatos.github.io/pt-r4ds/datetimes.html) | ?? |
-|   16  | 11/08/2025 | [Valores faltantes](https://cienciadedatos.github.io/pt-r4ds/missing-values.html) | ?? |
+|   16  | 11/08/2025 | [Valores faltantes](https://cienciadedatos.github.io/pt-r4ds/missing-values.html) | Luana Antunes |
 |   ??  | ?? | [Uniões (joins)](https://cienciadedatos.github.io/pt-r4ds/joins.html) | ?? |
 
 
