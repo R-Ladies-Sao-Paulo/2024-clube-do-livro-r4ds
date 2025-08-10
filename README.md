@@ -50,12 +50,12 @@ No encontro, a ideia é que uma pessoa faça uma apresentação sobre o capítul
 | Encontro | Data | Capítulo(s)/Tema | Quem apresenta |
 |:--------:|:--------:|:------------------------------:|:------------------:|
 |   14  | 08/04/2025 | [Vetores Lógicos](https://cienciadedatos.github.io/pt-r4ds/logicals.html) | Beatriz Milz |
-|   16  | 28/07/2025 | [Números](https://cienciadedatos.github.io/pt-r4ds/numbers.html) | Beatriz Milz |
+|   ??  | ?? | [Números](https://cienciadedatos.github.io/pt-r4ds/numbers.html) | Beatriz Milz |
 |   ??  | ?? | [Strings](https://cienciadedatos.github.io/pt-r4ds/strings.html) | ?? |
 |   ??  | ?? | [Expressões Regulares](https://cienciadedatos.github.io/pt-r4ds/regexps.html) | ?? |
 |   ??  | ?? | [Fatores](https://cienciadedatos.github.io/pt-r4ds/factors.html) | ?? |
 |   ??  | ?? | [Datas e horas](https://cienciadedatos.github.io/pt-r4ds/datetimes.html) | ?? |
-|   ??  | ?? | [Valores faltantes](https://cienciadedatos.github.io/pt-r4ds/missing-values.html) | ?? |
+|   16  | 11/08/2025 | [Valores faltantes](https://cienciadedatos.github.io/pt-r4ds/missing-values.html) | ?? |
 |   ??  | ?? | [Uniões (joins)](https://cienciadedatos.github.io/pt-r4ds/joins.html) | ?? |
 
 
