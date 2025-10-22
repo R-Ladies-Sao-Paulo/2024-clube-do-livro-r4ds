@@ -50,7 +50,8 @@ No encontro, a ideia é que uma pessoa faça uma apresentação sobre o capítul
 | Encontro | Data | Capítulo(s)/Tema | Quem apresenta |
 |:--------:|:--------:|:------------------------------:|:------------------:|
 |   14  | 08/04/2025 | [Vetores Lógicos](https://cienciadedatos.github.io/pt-r4ds/logicals.html) | Beatriz Milz |
-|   17  | 09/10/2025 | [Números](https://cienciadedatos.github.io/pt-r4ds/numbers.html) | @IanniMuliterno |
+|   17  | 09/10/2025 | [Números](https://cienciadedatos.github.io/pt-r4ds/numbers.html) (Parte 1) | @IanniMuliterno |
+|   18  | 05/11/2025 | [Números](https://cienciadedatos.github.io/pt-r4ds/numbers.html) (Parte 2) | @IanniMuliterno |
 |   ??  | ?? | [Strings](https://cienciadedatos.github.io/pt-r4ds/strings.html) | ?? |
 |   ??  | ?? | [Expressões Regulares](https://cienciadedatos.github.io/pt-r4ds/regexps.html) | ?? |
 |   ??  | ?? | [Fatores](https://cienciadedatos.github.io/pt-r4ds/factors.html) | ?? |
