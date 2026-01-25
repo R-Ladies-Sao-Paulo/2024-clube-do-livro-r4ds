@@ -1,5 +1,7 @@
 # Clube do livro R4DS + R-Ladies São Paulo
 
+## >>> Status: Atualmente, o Clube do Livro está em **PAUSA**.
+
 Clube do livro [R for Data Science](https://r4ds.hadley.nz/) (R4DS) (2 edição), escrito por Hadley Wickham, Mine Çetinkaya-Rundel, e Garrett Grolemund.
 
 Usamos a versão que está sendo traduzida para português, disponível em <https://cienciadedatos.github.io/pt-r4ds/>.
@@ -51,7 +53,7 @@ No encontro, a ideia é que uma pessoa faça uma apresentação sobre o capítul
 |:--------:|:--------:|:------------------------------:|:------------------:|
 |   14  | 08/04/2025 | [Vetores Lógicos](https://cienciadedatos.github.io/pt-r4ds/logicals.html) | Beatriz Milz |
 |   17  | 09/10/2025 | [Números](https://cienciadedatos.github.io/pt-r4ds/numbers.html) (Parte 1) | @IanniMuliterno |
-|   18  | 05/11/2025 | [Números](https://cienciadedatos.github.io/pt-r4ds/numbers.html) (Parte 2) | @IanniMuliterno |
+|   18  |  | [Números](https://cienciadedatos.github.io/pt-r4ds/numbers.html) (Parte 2) |  |
 |   ??  | ?? | [Strings](https://cienciadedatos.github.io/pt-r4ds/strings.html) | ?? |
 |   ??  | ?? | [Expressões Regulares](https://cienciadedatos.github.io/pt-r4ds/regexps.html) | ?? |
 |   ??  | ?? | [Fatores](https://cienciadedatos.github.io/pt-r4ds/factors.html) | ?? |
